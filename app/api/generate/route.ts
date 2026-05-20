@@ -4,9 +4,8 @@ import { buildPrompt } from '@/lib/prompts';
 import type { GenerateRequest, BlogPost } from '@/lib/types';
 import { randomUUID } from 'crypto';
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
 export async function POST(req: NextRequest) {
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const body = (await req.json()) as GenerateRequest;
   const { pillar, topic, keywords = '', memo = '' } = body;
 
