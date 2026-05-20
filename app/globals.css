@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.prose-blog h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.prose-blog h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.prose-blog p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.prose-blog ul, .prose-blog ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose-blog li {
+  margin-bottom: 0.35rem;
+  line-height: 1.7;
+}
