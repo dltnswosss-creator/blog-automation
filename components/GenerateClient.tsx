@@ -149,14 +149,18 @@ export default function GenerateClient() {
           {/* 메모 */}
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-1">
-              실제 에피소드 / 메모{' '}
+              {pillar === 'health' ? '논문·연구 요약 / 메모' : '실제 에피소드 / 메모'}{' '}
               <span className="text-xs font-normal text-gray-400">(선택)</span>
             </label>
             <textarea
               value={memo}
               onChange={(e) => setMemo(e.target.value)}
               rows={4}
-              placeholder="실제 있었던 에피소드, 회원 이야기, 넣고 싶은 포인트 등을 자유롭게 적어주세요."
+              placeholder={
+                pillar === 'health'
+                  ? '논문이나 연구 내용을 요약해서 붙여넣으세요. 이 내용을 토대로 블로그 글을 작성합니다.'
+                  : '실제 있었던 에피소드, 회원 이야기, 넣고 싶은 포인트 등을 자유롭게 적어주세요.'
+              }
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 resize-none"
             />
           </div>
